@@ -11,4 +11,4 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to college swimming time improvement, professional swimming statistics, or heights in athletes. I am going to research what kind of data sets are available in these topics. I   will explore topice outside of athletics, and into other things I am interested in. 
+I am interested in exploring data related to college swimming time improvement, professional swimming statistics, or heights in athletes. I am going to research what kind of data sets are available in these topics. I  will explore topics outside of athletics, and into other things I am interested in. 
