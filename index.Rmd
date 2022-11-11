@@ -16,3 +16,21 @@ I am interested in exploring data related to college swimming time improvement, 
 ## Proposal 
 
 I will be using the democracy barometer, which studies and rates the quality of democracy in 53 countries. My research question will be predicting that in the year 2001-2005, the quality of democracy increased in the United States, the United Kingdom, and Canada, and Japan. I will be predicting that in reaction to the terrorist attack on September 11th., 2001, these four countries increased on the democratic scale due to alliances pertaining to the United States foreign and domestic policy shifts. The reasoning behind the four countries are the strong relationship between the US and the UK, the closeness in proximity of Canada, and the role of US defense in Japan. My explanatory variables are based on the democracy barometers’ three  fundamental elements of democracy: Freedom, Control, Equality. These three elements help rank and determine the outcome variable of a Democracy Index on a range of 0-100. An observed pattern of increase in the index would prove my hypothesis, while a plateau or a decrease would disprove my hypothesis. 
+
+https://democracybarometer.org/data-and-documentation/
+
+```{r}
+library(readr)
+library(tidyverse)
+library(broom)
+library(readxl)
+db_data <- read_xlsx('DB_data_2020_all_data.xlsx')
+```
+
+ggplot(data = db_data, aes(x = Year, y = Secprop))
++ geom_line(mapping = aes())
+
+```{r}
+ggplot(data = db_data, aes(x = Year, y = Secprop, na.rm = TRUE))+ geom_col(fill = 'red') + labs(y = "Protection of Personal Security and Property") 
+```
+

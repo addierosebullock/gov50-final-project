@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["DB_data_2020_all_data.csv","db_data_2020_all_data.csv_.zip","db_data_2020_all_data.xlsx","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1521,6 +1521,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>I am interested in exploring data related to college swimming time improvement, professional swimming statistics, or heights in athletes. I am going to research what kind of data sets are available in these topics. I will explore topics outside of athletics, and into other things I am interested in.</p>
 <h2 id="proposal">Proposal</h2>
 <p>I will be using the democracy barometer, which studies and rates the quality of democracy in 53 countries. My research question will be predicting that in the year 2001-2005, the quality of democracy increased in the United States, the United Kingdom, and Canada, and Japan. I will be predicting that in reaction to the terrorist attack on September 11th., 2001, these four countries increased on the democratic scale due to alliances pertaining to the United States foreign and domestic policy shifts. The reasoning behind the four countries are the strong relationship between the US and the UK, the closeness in proximity of Canada, and the role of US defense in Japan. My explanatory variables are based on the democracy barometers’ three fundamental elements of democracy: Freedom, Control, Equality. These three elements help rank and determine the outcome variable of a Democracy Index on a range of 0-100. An observed pattern of increase in the index would prove my hypothesis, while a plateau or a decrease would disprove my hypothesis.</p>
+<p><a href="https://democracybarometer.org/data-and-documentation/" class="uri">https://democracybarometer.org/data-and-documentation/</a></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readxl.tidyverse.org'>readxl</a></span><span class='op'>)</span></span>
+<span><span class='va'>db_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/readxl/man/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='st'>'DB_data_2020_all_data.xlsx'</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>ggplot(data = db_data, aes(x = Year, y = Secprop))
++ geom_line(mapping = aes())</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>db_data</span>, <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Year</span>, y <span class='op'>=</span> <span class='va'>Secprop</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_col</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'red'</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Protection of Personal Security and Property"</span><span class='op'>)</span> </span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
