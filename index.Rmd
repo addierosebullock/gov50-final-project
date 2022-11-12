@@ -31,6 +31,8 @@ ggplot(data = db_data, aes(x = Year, y = Secprop))
 + geom_line(mapping = aes())
 
 ```{r}
-ggplot(data = db_data, aes(x = Year, y = Secprop, na.rm = TRUE))+ geom_col(fill = 'red') + labs(y = "Protection of Personal Security and Property") 
+db_data_plot <- ggplot(data = db_data, aes(x = Year, y = Secprop, na.rm = TRUE))+ geom_col(fill = 'red') + labs(y = "Protection of Personal Security and Property") 
+
+db_data_plot
 ```
 
