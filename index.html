@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["DB_data_2020_all_data.csv","db_data_2020_all_data.csv_.zip","db_data_2020_all_data.xlsx","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["~$db_data_2020_all_data_standardised.xlsx","db_data_2020_all_data_standardised.xlsx","DB_data_2020_all_data.csv","db_data_2020_all_data.csv_.zip","db_data_2020_all_data.xlsx","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.18/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1472,7 +1472,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.18/header-attrs.js"></script>
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1517,31 +1517,172 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-thoughts">Project thoughts</h2>
-<p>I am interested in exploring data related to college swimming time improvement, professional swimming statistics, or heights in athletes. I am going to research what kind of data sets are available in these topics. I will explore topics outside of athletics, and into other things I am interested in.</p>
-<h2 id="proposal">Proposal</h2>
-<p>I will be using the democracy barometer, which studies and rates the quality of democracy in 53 countries. My research question will be predicting that in the year 2001-2005, the quality of democracy increased in the United States, the United Kingdom, and Canada, and Japan. I will be predicting that in reaction to the terrorist attack on September 11th., 2001, these four countries increased on the democratic scale due to alliances pertaining to the United States foreign and domestic policy shifts. The reasoning behind the four countries are the strong relationship between the US and the UK, the closeness in proximity of Canada, and the role of US defense in Japan. My explanatory variables are based on the democracy barometers’ three fundamental elements of democracy: Freedom, Control, Equality. These three elements help rank and determine the outcome variable of a Democracy Index on a range of 0-100. An observed pattern of increase in the index would prove my hypothesis, while a plateau or a decrease would disprove my hypothesis.</p>
-<p><a href="https://democracybarometer.org/data-and-documentation/" class="uri">https://democracybarometer.org/data-and-documentation/</a></p>
+<h2 id="introduction">Introduction:</h2>
+<p>In my final project, I decided to look into the quality of democracy in countries when democracy is challenged or attacked. I will use the attacks on the United States on September 11th, 2001 as the event, and will look at the United States and the 11 other original (NATO) North Atlantic Treaty Organization members (Belgium, Canada, Denmark, France, Iceland, Italy, Luxembourg, Netherlands, Norway, Portugal, United Kingdom, and United States). Since NATO was formed to promote freedom in 1949, I felt that these 12 countries accurately support and defend democracy. I predict that after 9/11, the levels and views of democracy in the 12 original NATO countries will increase, due to the level of threat presented. I think this is interesting because of a large attack on the United States can cause ripple of effects throughout the world.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readxl.tidyverse.org'>readxl</a></span><span class='op'>)</span></span>
-<span><span class='va'>db_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/readxl/man/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='st'>'DB_data_2020_all_data.xlsx'</span><span class='op'>)</span></span></code></pre>
+<span><span class='va'>db_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/readxl/man/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='st'>'DB_data_2020_all_data.xlsx'</span><span class='op'>)</span></span>
+<span><span class='va'>db_data_sd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/readxl/man/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='st'>'DB_data_2020_all_data_standardised.xlsx'</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>ggplot(data = db_data, aes(x = Year, y = Secprop))
-+ geom_line(mapping = aes())</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>db_data_plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>db_data</span>, <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Year</span>, y <span class='op'>=</span> <span class='va'>Secprop</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_col</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'red'</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Protection of Personal Security and Property"</span><span class='op'>)</span> </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>db_data_nato</span> <span class='op'>&lt;-</span> <span class='va'>db_data_sd</span>  <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Country</span>  <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span>  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Belgium"</span>,<span class='st'>"Canada"</span>,<span class='st'>"Denmark"</span>,<span class='st'>"France"</span>,<span class='st'>"Iceland"</span>,<span class='st'>"Italy"</span>,<span class='st'>"Luxembourg"</span>,<span class='st'>"Netherlands"</span>,<span class='st'>"Norway"</span>,<span class='st'>"Portugal"</span>,<span class='st'>"United Kingdom"</span>,<span class='st'>"United States"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Year</span> <span class='op'>&gt;=</span>  <span class='fl'>1995</span> <span class='op'>&amp;</span> <span class='va'>Year</span> <span class='op'>&lt;=</span> <span class='fl'>2005</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/select.html'>select</a></span><span class='op'>(</span><span class='va'>Country</span>, <span class='va'>Year</span>, <span class='va'>Countryyear</span>, <span class='va'>FREEDOM</span>, <span class='va'>CONTROL</span>, <span class='va'>EQUALITY</span>, <span class='va'>DQ</span><span class='op'>)</span>  <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>is_US <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>Country</span> <span class='op'>==</span> <span class='st'>"United States"</span>, <span class='st'>"United States"</span>, <span class='st'>"Other"</span><span class='op'>)</span>,</span>
+<span>         after_911 <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>Year</span> <span class='op'>&gt;</span> <span class='fl'>2001</span>, <span class='st'>"Post 9/11"</span>, <span class='st'>"Before 9/11"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="data">Data:</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>db_data_nato</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>DQ</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_histogram.html'>geom_histogram</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'red'</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>'Quality of Democracy'</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>'Count'</span>,</span>
+<span>       title <span class='op'>=</span>  <span class='st'>'Quality of Democracy in NATO Countries from 1995-2005'</span><span class='op'>)</span></span></code></pre>
+</div>
+<img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>db_data_nato</span><span class='op'>$</span><span class='va'>DQ</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  3.659   3.852   4.061   4.064   4.241   4.630 </code></pre>
+</div>
+<p>This data is from the democracy barometer, which determines the quality of democracy by three sections: freedom, control, and equality. For each individual index, it requires expert coding to determine each level to calculate the quality of democracy. Freedom is defined as the individual’s liberties, rule of law, and public sphere. Control is defined as the competition, market, mutual constraints, and governmental capability. Equality is defined as the transparency, participation, and representation of the constituents. The quality of democracy is an average of these things, but is on an unit-less scale. The codebook states that researchers can create their own scale using the raw measurement, but we can use the raw data to compare between countries and over time. My dependent variable will be the Quality of Democracy (DQ) from 1995-2005, while the independent variables are year, before and after 9/11, and whether or not the country is the United States. I will measure this by looking at the change over 10 years.</p>
+<p>Democracy Barometer Website:
+<a href="https://democracybarometer.org/data-and-documentation/" class="uri">https://democracybarometer.org/data-and-documentation/</a></p>
+<h2 id="results">Results:</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>db_data_nato</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>Year</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>DQ</span>, group <span class='op'>=</span> <span class='va'>Country</span><span class='op'>)</span><span class='op'>)</span>  <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='va'>Country</span><span class='op'>)</span><span class='op'>)</span>  <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2001.696</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/scale_manual.html'>scale_color_manual</a></span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Belgium"</span> <span class='op'>=</span> <span class='st'>'green'</span>,<span class='st'>"Canada"</span> <span class='op'>=</span> <span class='st'>'orange'</span>,<span class='st'>"Denmark"</span> <span class='op'>=</span> <span class='st'>'yellow'</span>,<span class='st'>"France"</span> <span class='op'>=</span>  <span class='st'>'red'</span>,<span class='st'>"Iceland"</span> <span class='op'>=</span> <span class='st'>'light blue'</span>,<span class='st'>"Italy"</span> <span class='op'>=</span> <span class='st'>'pink'</span>,<span class='st'>"Luxembourg"</span> <span class='op'>=</span> <span class='st'>'purple'</span>,<span class='st'>"Netherlands"</span> <span class='op'>=</span> <span class='st'>'dark blue'</span>,<span class='st'>"Norway"</span> <span class='op'>=</span> <span class='st'>'hot pink'</span>,<span class='st'>"Portugal"</span> <span class='op'>=</span> <span class='st'>'lime green'</span>,<span class='st'>"United Kingdom"</span> <span class='op'>=</span> <span class='st'>'dark green'</span>,<span class='st'>"United States"</span> <span class='op'>=</span> <span class='st'>'black'</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/scale_continuous.html'>scale_x_continuous</a></span><span class='op'>(</span>breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1995</span><span class='op'>:</span><span class='fl'>2005</span><span class='op'>)</span>, labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1995</span><span class='op'>:</span><span class='fl'>2005</span><span class='op'>)</span><span class='op'>)</span>  <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>'Year'</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>'Quality of Democracy'</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>'Change in Quality of Democracy in NATO Countries from 1995 to 2005'</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>lm2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span>data  <span class='op'>=</span> <span class='va'>db_data_nato</span>,</span>
+<span>          formula <span class='op'>=</span> <span class='va'>DQ</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>Year</span><span class='op'>)</span><span class='op'>*</span><span class='va'>after_911</span><span class='op'>*</span><span class='va'>is_US</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>db_data_plot</span></span></code></pre>
+<span><span class='va'>d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>lm2</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>d</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Intercept"</span>, <span class='st'>"Year"</span>, <span class='st'>"After 9/11"</span>,</span>
+<span>                 <span class='st'>"United States"</span>, <span class='st'>"Year:After 9/11"</span>,</span>
+<span>                 <span class='st'>"Year:United States"</span>, <span class='st'>"After 9/11:United States"</span>,</span>
+<span>                 <span class='st'>"Year:After 9/11:United States"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>d</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Std. Error</th>
+<th style="text-align: right;">t value</th>
+<th style="text-align: right;">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: right;">-11.977</td>
+<td style="text-align: right;">27.767</td>
+<td style="text-align: right;">-0.431</td>
+<td style="text-align: right;">0.667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">0.578</td>
+<td style="text-align: right;">0.564</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">After 9/11</td>
+<td style="text-align: right;">33.018</td>
+<td style="text-align: right;">71.502</td>
+<td style="text-align: right;">0.462</td>
+<td style="text-align: right;">0.645</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">48.570</td>
+<td style="text-align: right;">96.189</td>
+<td style="text-align: right;">0.505</td>
+<td style="text-align: right;">0.614</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Year:After 9/11</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">-0.462</td>
+<td style="text-align: right;">0.645</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year:United States</td>
+<td style="text-align: right;">-0.024</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">-0.506</td>
+<td style="text-align: right;">0.614</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">After 9/11:United States</td>
+<td style="text-align: right;">-68.104</td>
+<td style="text-align: right;">247.691</td>
+<td style="text-align: right;">-0.275</td>
+<td style="text-align: right;">0.784</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year:After 9/11:United States</td>
+<td style="text-align: right;">0.034</td>
+<td style="text-align: right;">0.124</td>
+<td style="text-align: right;">0.275</td>
+<td style="text-align: right;">0.784</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>db_data_nato</span><span class='op'>$</span><span class='va'>preds</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.lm.html'>predict.lm</a></span><span class='op'>(</span><span class='va'>lm2</span> , newdata <span class='op'>=</span>  <span class='va'>db_data_nato</span><span class='op'>)</span> </span>
+<span></span>
+<span><span class='va'>db_data_nato</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>groups <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>is_US</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>after_911</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x  <span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>Year</span><span class='op'>)</span>, y<span class='op'>=</span> <span class='va'>preds</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='va'>groups</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span><span class='fl'>2001.696</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/scale_continuous.html'>scale_x_continuous</a></span><span class='op'>(</span>breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1995</span><span class='op'>:</span><span class='fl'>2005</span><span class='op'>)</span>, labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1995</span><span class='op'>:</span><span class='fl'>2005</span><span class='op'>)</span><span class='op'>)</span>  <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>'Year'</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>'Quality of Democracy'</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>'Predicted Change in Quality of Democracy\nin US vs. NATO Countries Before and After 9/11'</span><span class='op'>)</span></span></code></pre>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><img src="index_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+</div>
+<p>Because we have two binary variables (post-9/11 and United States), we can look at the regression model as four separate equations, each predicting Democracy Quality by Year, with varying intercepts and slopes:</p>
+<ul>
+<li>Before 9/11 &amp; the US: Predicted QD = 36.59235 - 0.016338(Year)</li>
+<li>After 9/11 &amp; the US: Predicted QD = 1.505833 + 0.001147(Year)</li>
+<li>Before 9/11 &amp; not the US: Predicted QD = -11.977289 + 0.008037(Year)</li>
+<li>After 9/11 &amp; not the US: Predicted QD = 21.04051 - 0.008466(Year)</li>
+</ul>
+<p>The plot above shows these predicted results, based on the regression. Visually, we see that before 9/11, the Quality of Democracy was declining in the United States and increasing in that other NATO countries. Visually, after 9/11, we see that Quality of Democracy drops drastically for the U.S. and begins to incline again, while the NATO begins to decline.</p>
+<h2 id="conclusion">Conclusion:</h2>
+<p>In this study, I found that there is no statistical significance of changes democracy score over time for either the US or non-US NATO countries, nor are there statistically significant differences in democracy score between the US and NATO countries before or after 9/11. Because none of the coefficeiints are significant for the alpha = 0.05, I cannot reject the null hypothesis that democracy in these 12 countries did not increase. A limitation was making the proper regression that could accurately compare, so I would explore doing a true time series in the future. A limitation of my analysis was not looking into the public’s opinion of democracy in these countries, because the reaction of the people is immediate, while the reactions of the government take time. For the data I explore the before-and-after design.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
