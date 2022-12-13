@@ -1,7 +1,7 @@
 ---
 title: "Gov 50 Final Project"
 author: "Addie Rose Bullock"
-description: "My final project"
+description: "How did the Quality of Democracy change for NATO countries after the 9/11 Terrorist Attacks on the United States"
 output:
   distill::distill_article:
     self_contained: false
@@ -45,7 +45,7 @@ summary(db_data_nato$DQ)
 
 
 ```
-This data is from the democracy barometer, which determines the quality of democracy by three sections: freedom, control, and equality. For each individual index, it requires expert coding to determine each level to calculate the quality of democracy. Freedom is defined as the individual's liberties, rule of law, and public sphere. Control is defined as the competition, market, mutual constraints, and governmental capability. Equality is defined as the transparency, participation, and representation of the constituents. The quality of democracy is an average of these things, but is on an unit-less scale. The codebook states that researchers can create their own scale using the raw measurement, but we can use the raw data to compare between countries and over time. My dependent variable will be the Quality of Democracy (DQ) from 1995-2005, while the independent variables are year, before and after 9/11, and whether or not the country is the United States. I will measure this by looking at the change over 10 years. 
+This data is from the democracy barometer, which determines the quality of democracy by three sections: freedom, control, and equality. I explored the data with a before-and-after design with the key date being Septermber 11th,  2001. For each individual index, it requires expert coding to determine each level to calculate the quality of democracy. Freedom is defined as the individual's liberties, rule of law, and public sphere. Control is defined as the competition, market, mutual constraints, and governmental capability. Equality is defined as the transparency, participation, and representation of the constituents. The quality of democracy is an average of these things, but is on an unit-less scale. The codebook states that researchers can create their own scale using the raw measurement, but we can use the raw data to compare between countries and over time. My dependent variable will be the Quality of Democracy (DQ) from 1995-2005, while the independent variables are year, before and after 9/11, and whether or not the country is the United States. I will measure this by looking at the change over 10 years. 
 
 Democracy Barometer Website:
 https://democracybarometer.org/data-and-documentation/
@@ -101,11 +101,13 @@ Because we have two binary variables (post-9/11 and United States), we can look 
 * Before 9/11 & not the US: Predicted QD = -11.977289 + 0.008037(Year)
 * After 9/11 & not the US: Predicted QD = 21.04051 - 0.008466(Year)
 
-The plot above shows these predicted results, based on the regression. Visually, we see that before 9/11, the Quality of Democracy was declining in the United States and increasing in that other NATO countries. Visually, after 9/11, we see that Quality of Democracy drops drastically for the U.S. and begins to incline again, while the NATO begins to decline. 
+The plot above shows these predicted results, based on the regression. Visually, we see that before 9/11, the Quality of Democracy was declining in the United States and increasing in that other NATO countries. Visually, after 9/11, we see that Quality of Democracy drops drastically for the U.S. and begins to incline again, while the NATO begins to decline. Because I wanted varying slopes and varying intercepts, there is not one main coeffient due to the interaction terms. Which is why I have provided the four equations above. We can see that after 9/11 there is a positive coefficient on year for the U.S., indicating that on average the DQ score increased by 0.01147. We do see that in the United States, the drastic drop in intercept did fall from 36.59235 to 1.505833. None of these results were statistically significant, as the p-values were all far above the alpha level of 0.05. 
+
+I do not believe this to be a causal relationship, as there are many possible confounders and omitted variables. For instance,  there may have been other foreign or domestic policies in the U.S. or  other NATO  countries that were enacted around the same as 9/11, but were unrelated to the terrorist attack. 
 
 
 ## Conclusion:
 
-In this study, I explored the date with a before-and-after design and found that there is no statistical significance of changes democracy score over time for either the US or non-US NATO countries, nor are there statistically significant differences in democracy score between the US and NATO countries before or after 9/11. Because none of the coefficeiints are significant for the alpha = 0.05, I cannot reject the null hypothesis that democracy in these 12 countries did not increase. A limitation was making the proper regression that could accurately compare, so I would explore doing a true time series in the future. A limitation of my analysis was not looking into the public's opinion of democracy in these countries, because the reaction of the people is immediate, while the reactions of the government take time.
+In this study, I found that there is no statistical significance of changes democracy score over time for either the US or non-US NATO countries, nor are there statistically significant differences in democracy score between the US and NATO countries before or after 9/11. Because none of the coefficeiints are significant for the alpha = 0.05, I cannot reject the null hypothesis that democracy in these 12 countries did not increase. A limitation was making the proper regression that could accurately compare, so I would explore doing a true time series in the future. A limitation of my analysis was not looking into the public's opinion of democracy in these countries, because the reaction of the people is immediate, while the reactions of the government take time.
 
 
